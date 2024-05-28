@@ -1,0 +1,29 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package personagem;
+
+/**
+ *
+ * @author 324149373
+ */
+public class Terraqueo extends personagemDragonBall {
+
+    private final String pais;
+    private final String cidade;
+
+    public Terraqueo(String nome, int idade, String sexo, String poderEspecial, int temporada, int ki, String pais, String cidade) {
+        super(nome, idade, sexo, poderEspecial, temporada, ki);
+        this.pais = pais;
+        this.cidade = cidade;
+
+    }
+
+    @Override
+    public double calcularPoder() {
+        return ki;
+    }
+
+}
