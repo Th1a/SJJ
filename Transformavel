@@ -1,0 +1,10 @@
+package personagem;
+
+/**
+ *
+ * @author 324149373
+ */
+public interface Transformavel {
+    
+    public String transformar(int nivel);
+}
