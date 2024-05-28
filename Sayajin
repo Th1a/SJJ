@@ -1,0 +1,54 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package personagem;
+
+/**
+ *
+ * @author 324149373
+ */
+public class Sayajin extends personagemDragonBall implements Transformavel{
+    private final String  temRabo;
+    private int nivelMaximoSSJ;
+    
+    public Sayajin(String nome, int idade ,String sexo, String poderEspecial,int temporada,int ki, String pais,String cidade, int nivelMaximoSSJ,String temRabo){
+        super(nome,idade,sexo,poderEspecial,temporada,ki);
+        this.nivelMaximoSSJ = nivelMaximoSSJ;
+        this.temRabo = temRabo;
+    }
+    @Override
+    public double calcularPoder(){
+            return(nivelMaximoSSJ);
+    }
+   
+
+    @Override
+    public String transformar(int nivel) {
+       String opcoes = " ";
+        switch (nivel) {
+            case 1:
+                opcoes = nome + "Se transformou em SSJ1 !";
+                nivelMaximoSSJ += 1;
+                break;
+            case 2:
+                opcoes = nome + "Se transformou em SSJ1 2";
+                nivelMaximoSSJ += 2;
+                break;
+            case 3:
+                opcoes =  nome + "Se transformou em SSJ1 3" ;
+                nivelMaximoSSJ += 3;
+                break;
+                return opcoes;
+            default:
+                break;
+        }
+                
+        if("Goku".equals(nome) && "Vegeta".equals(nome)){
+            System.out.println("Apenas goku e vegeta podem se transformar em SSJ 4 ou 5");
+        }  
+        return opcoes;
+    }
+    }
+}
