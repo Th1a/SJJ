@@ -1,10 +1,13 @@
-package personagem;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Interface.java to edit this template
+ */
+package com.mycompany.dragonball;
 
 /**
  *
- * @author 324149373
+ * @author Swat
  */
 public interface Transformavel {
-    
-    public String transformar(int nivel);
+    public int Transformar(int nivel);    
 }
