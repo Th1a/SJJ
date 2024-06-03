@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.dragonball;
+package com.mycompany.dragoball;
 
 /**
  *
- * @author Swat
+ * @author 324149373
  */
 public class Sayajin extends personagemDragonBall implements Transformavel {
 
@@ -19,6 +19,11 @@ public class Sayajin extends personagemDragonBall implements Transformavel {
         this.nivelMaximoSJJ = nivelMaximoSSJ;
     }
 
+    @Override
+    public String toString(){
+        return "Nome: " + this.nome + "Idade: " + this.idade + "Sexo:" + this.sexo +"Temporada: " + this.temporada + "Poder especial" + this.poderEspecial + "Nivel SJJ:" + this.nivelMaximoSJJ + "Tem rabo: " + this.temRabo;
+    }
+    
     @Override
     public double calcularPoder() {
         return ki * (1 + nivelMaximoSJJ * 0.1);
@@ -48,15 +53,21 @@ public class Sayajin extends personagemDragonBall implements Transformavel {
                 
                 case 4:
                if("Goku".equals(nome) || "Vegeta".equals(nome)){
-                System.out.println("\"Não foi possível transformar esse sayajin\"");
-                } opcoes = nome + "Se transformou em SSJ1 4 !";
+                System.out.println("{{"+  nome + "}}" + " transformou para super sayajin nível" + "{{"+  nivel + "}}");
+                } 
+               else{
+                   System.out.println(" O " + this.nome +" não consegue   transformar em Super Sayajin " + nivel);
+               }
                 nivelMaximoSJJ += 4;
                 break;
                 
                 case 5:
                if("Goku".equals(nome) || "Vegeta".equals(nome)){
-                System.out.println("Não foi possível transformar esse sayajin");
-                } opcoes = nome + "Se transformou em SSJ1 5 !!";
+                System.out.println("{{"+  nome + "}}" + " transformou para super sayajin nível" + "{{"+  nivel + "}}");
+                } 
+               else{
+                  System.out.println(" O " + this.nome +" não consegue   transformar em Super Sayajin " + nivel);
+               }
                 nivelMaximoSJJ += 5;
                 break;
                     
