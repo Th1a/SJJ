@@ -18,11 +18,11 @@ public class Pricipal {
         Namekuseijin namekuseijin = PersonagemFactory.criarNamekuseijin("Dendê",4000,"M","HEAL",4,2500,2,true);
     
         Goku.Transformar(5);
-        Goku.toString();
+        System.out.println (Goku.toString());
         gohan.Transformar(5);
-        gohan.toString();
+        System.out.println (gohan.toString());
         namekuseijin.fazerDesejo(" ");
-        namekuseijin.toString();
+        System.out.println (namekuseijin.toString());
         
         
         
