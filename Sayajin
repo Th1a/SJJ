@@ -1,54 +1,75 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package personagem;
+package com.mycompany.dragonball;
 
 /**
  *
- * @author 324149373
+ * @author Swat
  */
-public class Sayajin extends personagemDragonBall implements Transformavel{
-    private final String  temRabo;
-    private int nivelMaximoSSJ;
-    
-    public Sayajin(String nome, int idade ,String sexo, String poderEspecial,int temporada,int ki, String pais,String cidade, int nivelMaximoSSJ,String temRabo){
-        super(nome,idade,sexo,poderEspecial,temporada,ki);
-        this.nivelMaximoSSJ = nivelMaximoSSJ;
+public class Sayajin extends personagemDragonBall implements Transformavel {
+
+    private final String temRabo;
+    private  int nivelMaximoSJJ;
+
+    public Sayajin(String nome, int idade, String sexo, String poderEspecial, int temporada, int ki, int nivelMaximoSSJ, String temRabo) {
+        super(nome, idade, sexo, poderEspecial, temporada, ki);
         this.temRabo = temRabo;
+        this.nivelMaximoSJJ = nivelMaximoSSJ;
     }
-    @Override
-    public double calcularPoder(){
-            return(nivelMaximoSSJ);
-    }
-   
 
     @Override
-    public String transformar(int nivel) {
-       String opcoes = " ";
+    public double calcularPoder() {
+        return ki * (1 + nivelMaximoSJJ * 0.1);
+    }
+
+    @Override
+
+    public int Transformar(int nivel) {
+        
+        String opcoes = " ";
+
         switch (nivel) {
-            case 1:
-                opcoes = nome + "Se transformou em SSJ1 !";
-                nivelMaximoSSJ += 1;
+                case 1:
+                opcoes = "{{"+  nome + "}}" + " transformou para super sayajin nível" + "{{"+  nivel + "}}";
+                nivelMaximoSJJ += 1;
                 break;
-            case 2:
-                opcoes = nome + "Se transformou em SSJ1 2";
-                nivelMaximoSSJ += 2;
-                break;
-            case 3:
-                opcoes =  nome + "Se transformou em SSJ1 3" ;
-                nivelMaximoSSJ += 3;
-                break;
-                return opcoes;
-            default:
-                break;
-        }
                 
-        if("Goku".equals(nome) && "Vegeta".equals(nome)){
-            System.out.println("Apenas goku e vegeta podem se transformar em SSJ 4 ou 5");
-        }  
-        return opcoes;
+                case 2:
+               opcoes = "{{"+  nome + "}}" + " transformou para super sayajin nível" + "{{"+  nivel + "}}";
+                nivelMaximoSJJ += 2;
+                break;
+                
+                case 3:
+                opcoes = "{{"+  nome + "}}" + " transformou para super sayajin nível" + "{{"+  nivel + "}}";
+                nivelMaximoSJJ += 3;
+                break;
+                
+                case 4:
+               if("Goku".equals(nome) || "Vegeta".equals(nome)){
+                System.out.println("\"Não foi possível transformar esse sayajin\"");
+                } opcoes = nome + "Se transformou em SSJ1 4 !";
+                nivelMaximoSJJ += 4;
+                break;
+                
+                case 5:
+               if("Goku".equals(nome) || "Vegeta".equals(nome)){
+                System.out.println("Não foi possível transformar esse sayajin");
+                } opcoes = nome + "Se transformou em SSJ1 5 !!";
+                nivelMaximoSJJ += 5;
+                break;
+                    
+                default:
+                break;
+
+        }
+        return 0;
     }
-    }
+        public String temRabo(){
+            
+            return temRabo;
+        }
+    
+    
 }
