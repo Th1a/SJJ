@@ -1,26 +1,29 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package com.mycompany.dragonball;
+
+package com.mycompany.dragoball;
 
 /**
  *
- * @author Swat
+ * @author 324149373
  */
+public class Pricipal {
 
-public class Principal {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+        public static void main(String[] args) {
+       
         Terraqueo terraqueo =  PersonagemFactory.criarTerraqueo("Kuririn",44,"M","Kienzan",1,2000,"Brasino","laguna");
-        Sayajin goku =  PersonagemFactory.criarSayajin("Goku",66,"M", "Migate no gokui",6,8001, 5, "não");
+        Sayajin Goku =  PersonagemFactory.criarSayajin("Goku",66,"M", "Migate no gokui",6,8001, 5, "não");
         Sayajin gohan =  PersonagemFactory.criarSayajin("Gohan",16,"M", "Mystic",5,7000,2, "não");
         Namekuseijin namekuseijin = PersonagemFactory.criarNamekuseijin("Dendê",4000,"M","HEAL",4,2500,2,true);
     
-        goku.Transformar(5);
+        Goku.Transformar(5);
+        Goku.toString();
+        gohan.Transformar(5);
+        gohan.toString();
+        namekuseijin.fazerDesejo(" ");
+        namekuseijin.toString();
+        
         
         
     }
