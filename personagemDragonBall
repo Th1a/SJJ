@@ -1,17 +1,16 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  */
-package personagem;
+
+package com.mycompany.dragonball;
 
 /**
  *
- * @author 324149373
+ * @author Swat
  */
- public abstract class personagemDragonBall {
+public abstract class personagemDragonBall {
    
-    protected String  nome, sexo,poderEspecial ;
+    protected String  nome,sexo,poderEspecial ;
     protected int temporada ,idade, ki;
     
     public personagemDragonBall (String nome , int idade , String sexo, String poderEspecial,int temporada, int ki){
@@ -21,8 +20,8 @@ package personagem;
         this.poderEspecial = poderEspecial;
         this.temporada = temporada;
         this.ki = ki;
-    } 
+    }
      public abstract  double calcularPoder();   
-      
-    
+         
 }
+    
