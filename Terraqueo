@@ -2,11 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.dragonball;
+package com.mycompany.dragoball;
 
 /**
  *
- * @author Swat
+ * @author 324149373
  */
 public class Terraqueo extends personagemDragonBall {
 
@@ -21,10 +21,12 @@ public class Terraqueo extends personagemDragonBall {
     }
 
     @Override
+    public String toString(){
+        return "Nome: " + this.nome + "Idade: " + this.idade + "Sexo:" + this.sexo +"Temporada: " + "Poder especial" + this.poderEspecial + this.cidade + this.pais;
+    }
+    @Override
     public double calcularPoder() {
         return ki;
     }
 
 } 
-    
-
